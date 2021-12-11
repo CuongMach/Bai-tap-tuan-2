@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập cuối tuần</title>
+</head>
+<body>
+<!--Bài 1-->
+<!--<script>-->
+<!--    alert('Tuấn Cường')-->
+<!--</script>-->
+
+<!--Bài 2-->
+<!--<script>-->
+<!--    let number = parseFloat(prompt("Nhập số : "))-->
+<!--    let binhphuong = Math.pow(number, 2)-->
+<!--    alert("Bình phương là " + binhphuong)-->
+<!--</script>-->
+
+<!--Bài 3-->
+<!--<input type="number" id="sothunhat" value="">-->
+<!--<input type="number" id="sothuhai" value="">-->
+<!--<button onclick="number()">OK</button>-->
+<!--<h1 id="ketqua"></h1>-->
+<!--<script>-->
+<!--    function number(){-->
+<!--        let sothunhat = document.getElementById("sothunhat").value;-->
+<!--        let sothuhai = document.getElementById("sothuhai").value;-->
+<!--        dientich = sothunhat * sothuhai;-->
+<!--        document.getElementById("ketqua").innerHTML = "S = " + dientich;-->
+<!--    }-->
+
+<!--</script>-->
+
+<!--Bài 4a-->
+<!--<input type="number" id="soa" value="">-->
+<!--<button onclick="number()">OK</button>-->
+<!--<p id="ketqua"></p>-->
+<!--<p id="ketqua2"></p>-->
+<!--<script>-->
+<!--    function number(){-->
+<!--        let soa = document.getElementById("soa").value;-->
+<!--        let dientichhinhvuong = soa * soa-->
+<!--        let chuvihinhvuong = soa * 4-->
+<!--        document.getElementById("ketqua").innerHTML = "Chu vi hinh vuong = " + chuvihinhvuong-->
+<!--        document.getElementById("ketqua2").innerHTML = "Dien tich hinh vuong = " + dientichhinhvuong-->
+<!--    }-->
+<!--</script>-->
+
+<!--Bài 4b-->
+<!--<input type="number" id="soa" value="">-->
+<!--<input type="number" id="sob" value="">-->
+<!--<button onclick="number()">OK</button>-->
+<!--<p id="ketqua1"></p>-->
+<!--<p id="ketqua2"></p>-->
+<!--<script>-->
+<!--    function number() {-->
+<!--        let a = document.getElementById("soa").value;-->
+<!--        let b = document.getElementById("sob").value;-->
+<!--        let binhphuong = Math.pow(a, 2);-->
+<!--        let luythua = Math.pow(a, b);-->
+<!--        document.getElementById("ketqua1").innerHTML = "a^2 = " + binhphuong;-->
+<!--        document.getElementById("ketqua2").innerHTML = "a^b = " + luythua;-->
+<!--    }-->
+<!--</script>-->
+
+<!--Bài 4c-->
+<!--<input type="number" id="soa" value="">-->
+<!--<input type="number" id="sob" value="">-->
+<!--<button onclick="number()">OK</button>-->
+<!--<p id="ketqua"></p>-->
+<!--<script>-->
+<!--    function number() {-->
+<!--        let a = parseInt(document.getElementById("soa").value);-->
+<!--        let b = parseInt(document.getElementById("sob").value);-->
+<!--        let total = 0;-->
+<!--        for (i = a; i <= b; i = i + 1) ;{-->
+<!--            total = total + i;-->
+<!--            document.getElementById("ketqua").innerHTML = "a + b = " + total;-->
+<!--        }-->
+
+<!--    }-->
+<!--</script>-->
+
+<!--Bài 4d-->
+<!--<input type="text" id="year" placeholder="Nhập vào năm ?">-->
+<!--<button onclick="theKy()">Tính</button>-->
+<!--<p id="ketqua"></p>-->
+
+<!--<script>-->
+<!--    function theKy() {-->
+<!--        let year = parseInt(document.getElementById("year").value);-->
+<!--        let theKy = parseInt(year / 100);-->
+<!--        if (year % 100 === 0) {-->
+<!--            document.getElementById("ketqua").innerHTML = "Năm " + year + " là thế kỷ " + theKy-->
+<!--        } else {-->
+<!--            document.getElementById("ketqua").innerHTML = "Năm " + year + " là thế kỷ " + parseInt(theKy + 1)-->
+<!--        }-->
+
+<!--    }-->
+
+<!--</script>-->
+
+Bài 4eI
+<input type="number" id="soa" value="" placeholder="Nhập số A">
+<input type="number" id="sob" value="" placeholder="Nhập số B">
+<input type="number" id="soc" value="" placeholder="Nhập số C">
+<button onclick="number()">OK</button>
+<p id="ketqua"></p>
+<p id="ketqua2"></p>
+<script>
+    function number() {
+        let canha = parseInt(document.getElementById("soa").value);
+        let canhb = parseInt(document.getElementById("sob").value);
+        let canhc = parseInt(document.getElementById("soc").value);
+
+        if (canha + canhb > canhc && canha + canhc > canhb && canhb + canhc > canha) {
+            document.getElementById("ketqua").innerHTML = "A, B, C Là 3 cạnh của 1 tam giác"
+        } else {
+            if (canha + canhb < canhc && canha + canhc < canhb && canhb + canhc < canha) {
+                document.getElementById("ketqua").innerHTML = " A, B, C Không phải là 3 cạnh của 1 tam giác"
+            } else {
+                if (canha == canhb && canhb == canhc) {
+                    document.getElementById("ketqua2").innerHTML = "ABC là tam giác đều"
+                } else {
+                    if (canha == canhb || canha == canhc || canhb == canhc) {
+                        document.getElementById("ketqua2").innerHTML = "ABC là tam giác cân"
+                    } else {
+                        if ((canha * canha == canhb * canhb + canhc * canhc)
+                            || (canhb * canhb == canha * canha + canhc * canhc)
+                            ||
+                            (canhc * canhc == canha * canha + canhb * canhb)) {
+                            document.getElementById("ketqua2").innerHTML = "ABC là tam giác vuông"
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+</script>
+
+<!--Bài 4eII III IV-->
+<!--<input type="number" id="soa" value="" placeholder="Nhập cạnh A">-->
+<!--<input type="number" id="sob" value="" placeholder="Nhập cạnh B">-->
+<!--<input type="number" id="soc" value="" placeholder="Nhập cạnh C">-->
+<!--<button onclick="number()">OK</button>-->
+<!--<p id="ketqua"></p>-->
+<!--<script>-->
+<!--    function number() {-->
+<!--        let canha = parseInt(document.getElementById("soa").value);-->
+<!--        let canhb = parseInt(document.getElementById("sob").value);-->
+<!--        let canhc = parseInt(document.getElementById("soc").value);-->
+<!--        if(canha == canhb && canhb == canhc) {-->
+<!--            document.getElementById("ketqua").innerHTML = "ABC là tam giác đều"-->
+<!--        }-->
+<!--        else if(canha == canhb || canha == canhc || canhb == canhc){-->
+<!--            document.getElementById("ketqua").innerHTML = "ABC là tam giác cân"-->
+<!--        }else if((canha * canha == canhb * canhb + canhc * canhc) || (canhb * canhb == canha * canha + canhc * canhc) ||-->
+<!--            (canhc * canhc == canha * canha + canhb * canhb)){-->
+<!--            document.getElementById("ketqua").innerHTML = "ABC là tam giác vuông"-->
+<!--        }-->
+<!--    }-->
+<!--</script>-->
+</body>
+</html>
